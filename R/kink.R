@@ -26,7 +26,7 @@ e1 = y - (cbind(1,xmat))%*%(alpha)
 
  if (Call=="optim")
 return(sum(e1^2))
-    
+
   if (Call=="residuals")
   return(e1)
 
@@ -38,7 +38,7 @@ r=colMeans(Xmat)
 K1=ncol(Xmat)+ncol(Xmat)
 K2=ncol(Zmat)
 par=c(b0=1,x=rep(0.1,K1),z=rep(0.1,K2), kink=r)
-KK=length(par) 
+KK=length(par)
 model<- optim(par,LSkink,y=y,x=Xmat,z=Zmat,Call="optim",control = list(maxit=100000,fnscale=1)
           ,method="BFGS",hessian=TRUE)
 
@@ -72,18 +72,18 @@ output
 
 
 #### Example Simulation data
-set.seed(111)  # Set seed for reproducibility
-k = 1                         #number of dependent variable
-n = 500                       #number of observation
-r1=1.5                        # Kink parameter
-x = matrix(rnorm(n*k,r1,2),ncol=k)
-e = rnorm(n,0,sd=1)
-x1 = cbind(neg.part(x-r1),pos.part(x-r1))
-z = cbind(rnorm(n,0,sd=1))
-y=0.5+(0.5*x1[,1])-(1*x1[,2])+0.5*z+e
-plot(x,y, col="red", lwd=2)
+#set.seed(111)  # Set seed for reproducibility
+#k = 1                         #number of dependent variable
+#n = 500                       #number of observation
+#r1=1.5                        # Kink parameter
+#x = matrix(rnorm(n*k,r1,2),ncol=k)
+#e = rnorm(n,0,sd=1)
+#x1 = cbind(neg.part(x-r1),pos.part(x-r1))
+#z = cbind(rnorm(n,0,sd=1))
+#y=0.5+(0.5*x1[,1])-(1*x1[,2])+0.5*z+e
+#plot(x,y, col="red", lwd=2)
 
-Kinkreg(y,x,z,Call="optim")
+#Kinkreg(y,x,z,Call="optim")
 
 
 

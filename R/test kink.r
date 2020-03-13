@@ -1,6 +1,6 @@
 #### Kink test
 # Ho: Linear
-# Ha: Kink 
+# Ha: Kink
 
 kinktest=function(y,x,level=0.90, boot=100,search=0.01) {
 # Controls
@@ -48,11 +48,11 @@ thres=cbind(fit1$par,sqrt(diag(solve(fit1$hessian))))
 
 
 #---------- Threshold Model Grid Search----------------------
-  grid = length(gammas)  # specify grid search 
+  grid = length(gammas)  # specify grid search
   rd = length(dx)
   sse = matrix(0,grid,1) # store error term to find lowest error
   k = 4
-  # find threshold value 
+  # find threshold value
   for (j in 1:grid) {
   gamj=gammas[j]
   x1 = cbind(neg.part(x-gamj),pos.part(x-gamj))
@@ -64,7 +64,7 @@ thres=cbind(fit1$par,sqrt(diag(solve(fit1$hessian))))
   gammahat = gammas[gi]            # define of threshold value
   ssemin = sse[gi]                 # minimum sum square of error.
 
-#-----------------------------------------  
+#-----------------------------------------
 # setup the kink regression
 # Regression Estimate
 #----------------------------
@@ -74,19 +74,19 @@ thres=cbind(fit1$par,sqrt(diag(solve(fit1$hessian))))
   hg = cbind(neg.part(x-gammahat),pos.part(x-gammahat))
   hg1 = summary(lm(y~hg[,1]+hg[,2]))
   hg2 = hg1[1:3]
-  betahat = cbind(bt,gammahat)  # estimated result for Kink regression 
+  betahat = cbind(bt,gammahat)  # estimated result for Kink regression
   wt = n*(sse0-ssemin)/ssemin
   wg = n*(sse-ssemin)/ssemin
 
-# Plot Grid Search 
+# Plot Grid Search
 #plot(gammas,sse,type="l",ylab="Least Squares Criterion",xlab="kink Parameter")
 
 
 
 # predict kink regression
 G = cbind(1,neg.part(dx-gammahat),pos.part(dx-gammahat))
-yf = G%*%bt 
-#The parameter estimates from this fitted regression kink model 
+yf = G%*%bt
+#The parameter estimates from this fitted regression kink model
 bt # estimated parameter
 #yf # expected Yhat
 
@@ -151,7 +151,7 @@ windows()
 plot(x,y, main= "Kink fitted line")
 lines(dx,yf, col="red", lwd=3)
 output=list(
-  Wald.test=crit,pvalue=pv 
+  Wald.test=crit,pvalue=pv
 )
 output
 
@@ -160,15 +160,15 @@ output
 
 
 #### Example Simulation data
-set.seed(111)  # Set seed for reproducibility
-k = 1                         #number of dependent variable
-n = 500                       #number of observation
-r1=1.5                        # Kink parameter
-x = rnorm(n,r1,sd=1)
-e = rnorm(n,0,sd=1)
-x1 = cbind(neg.part(x-r1),pos.part(x-r1))
-y=0.5+(0.5*x1[,1])-(1*x1[,2])+e
+#set.seed(111)  # Set seed for reproducibility
+#k = 1                         #number of dependent variable
+#n = 500                       #number of observation
+#r1=1.5                        # Kink parameter
+#x = rnorm(n,r1,sd=1)
+#e = rnorm(n,0,sd=1)
+#x1 = cbind(neg.part(x-r1),pos.part(x-r1))
+#y=0.5+(0.5*x1[,1])-(1*x1[,2])+e
 
 # Ho: Linear
-# Ha: Kink 
-kinktest(y,x,level=0.90, boot=10,search=0.01) 
+# Ha: Kink
+#kinktest(y,x,level=0.90, boot=10,search=0.01)

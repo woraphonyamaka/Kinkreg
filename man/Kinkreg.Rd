@@ -1,6 +1,6 @@
 \name{Kinkreg}
 \alias{Kinkreg}
-%- Also NEED an '\alias' for EACH other topic documented here.
+
 \title{
 Kink regression estimation
 }
@@ -17,18 +17,17 @@ Kinkreg(y,x,z,Call="optim")
   \item{z}{ the matrix of exogenous variable}
   \item{Call}{ if Call="optim"     == optimization
                if Call="residuals" == retrun the residul series}
-
+}
 \details{
-The kink regression model is the nonlinear model in which the continous function is change at the kink point
+The kink regression model is the nonlinear model in which the continous function is change at the kink point.
 }
 \value{
-
- \item{result }{the parameter estimates, standard error, t-stat and p-value}
-  \item{RSS }{Residual sum Sqaures}
-
+\item{Result}{the parameter estimates, standard error, t-stat and p-value}
+\item{RSS}{Residual sum Sqaures}
 }
 \references{
 Hansen, B. E. (2017). Regression kink with an unknown threshold. Journal of Business & Economic Statistics, 35(2), 228-240.
+
 Sriboochitta, S., Yamaka, W., Maneejuk, P., & Pastpipatkul, P. (2017). A generalized information theoretical approach to non-linear time series model. In Robustness in Econometrics (pp. 333-348). Springer, Cham.
 }
 \author{
@@ -45,7 +44,8 @@ Woraphon Yamaka
 }
 \examples{
 #### Example Simulation data
-set.seed(111)  # Set seed for reproducibility
+
+set.seed(111)                 # Set seed for reproducibility
 k = 1                         #number of dependent variable
 n = 500                       #number of observation
 r1=1.5                        # Kink parameter
