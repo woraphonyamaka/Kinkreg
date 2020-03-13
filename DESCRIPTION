@@ -1,0 +1,10 @@
+Package: Kinkreg
+Type: Package
+Title: Kink regreaion model of Hansen (2018)
+Version: 0.1.0
+Author: Woraphon Yamaka
+Maintainer: The package maintainer <woraphon.econ@gmail.com>
+Description: Regression Kink With an Unknown Threshold and testing the kink effect
+License: COEE.2
+Encoding: UTF-8
+LazyData: true
