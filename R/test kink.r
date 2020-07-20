@@ -1,3 +1,8 @@
+# This is an  function named 'Copula based Stochastic frontier'
+# Written by Dr.Worphon Yamaka (modified form Hansen, 2017)
+# Center of excellence in Econometrics, Faculty of Economics,
+# Chiang Mai University
+
 #### Kink test
 # Ho: Linear
 # Ha: Kink

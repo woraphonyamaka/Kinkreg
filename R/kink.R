@@ -1,3 +1,7 @@
+# This is an  function named 'Copula based Stochastic frontier'
+# Written by Dr.Worphon Yamaka,
+# Center of excellence in Econometrics, Faculty of Economics,
+# Chiang Mai University
 #### Positive and Negative funcitons
 
 pos.part <- function(x) x*(x>0)  # Regime 1
