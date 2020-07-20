@@ -5,8 +5,8 @@
 kinktest=function(y,x,level=0.90, boot=100,search=0.01) {
 # Controls
 Mean=mean(x)
-lower=range(x)[1]+abs(Mean)
-upper=range(x)[2]-abs(Mean)
+lower=range(x)[1]+abs(Mean)*0.1
+upper=range(x)[2]-abs(Mean)*0.1
 gammas = seq(lower,upper,by=search) # Grid on Threshold parameter for estimation specify follow the data x
 dx = seq(min(x),max(x),by=0.1)              # Grid on regression function for display
 level = level			              # For confidence sets
