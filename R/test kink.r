@@ -7,11 +7,11 @@
 # Ho: Linear
 # Ha: Kink
 
-kinktest=function(y,x,level=0.90, boot=100,search=0.01) {
+kinktest=function(y,x,level=0.90, boot=100,search=0.01,LB) {
 # Controls
 Mean=mean(x)
-lower=range(x)[1]+abs(Mean)*0.1
-upper=range(x)[2]-abs(Mean)*0.1
+lower=range(x)[1]+abs(Mean)*LB
+upper=range(x)[2]-abs(Mean)*LB
 gammas = seq(lower,upper,by=search) # Grid on Threshold parameter for estimation specify follow the data x
 dx = seq(min(x),max(x),by=0.1)              # Grid on regression function for display
 level = level			              # For confidence sets
@@ -176,4 +176,4 @@ output
 
 # Ho: Linear
 # Ha: Kink
-#kinktest(y,x,level=0.90, boot=10,search=0.01)
+#kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)

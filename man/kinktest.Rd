@@ -8,7 +8,7 @@
 Hypothesis testing for kink point in kink regression. The null hyphothesis is  linear regression against the alternative hyphothesis of kink regression.
 }
 \usage{
-kinktest(y,x,level=0.90, boot=10,search=0.01)
+kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -59,7 +59,7 @@ x1 = cbind(neg.part(x-r1),pos.part(x-r1))
 y=0.5+(0.5*x1[,1])-(1*x1[,2])+e
 
 
-kinktest(y,x,level=0.90, boot=10,search=0.01)
+kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
