@@ -8,7 +8,7 @@
 Hypothesis testing for kink point in kink regression. The null hyphothesis is  linear regression against the alternative hyphothesis of kink regression.
 }
 \usage{
-kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)
+kinktest(y,x,level=0.90, boot=10,search=0.01, LB)
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
@@ -16,13 +16,12 @@ kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)
   \item{x}{ the matrix of regime-dependent independent variable}
   \item{level}{ Confidence interval}
   \item{boot}{ number of boostrapping}
-   \item{search}{ range of grid search
-    \item{LB}{ lower and upper bound restriction}
+  \item{search}{ range of grid search}
+  \item{LB}{lower and upper bound restriction}
 }
 
 \details{
-As shown by Hansen (1996), it is simple
-to simulate approximations to (10) using a multiplier bootstrap, and thus asymptotically valid p-values can be calculated. The following is his recommended algorithm. (Theorem 3 of Hansen (1996) shows that the algorithm produces asymptotically first-order correct p-values under the conditions of Theorem 1.)
+As shown by Hansen (1996), it is simple to simulate approximations using a multiplier bootstrap, and thus asymptotically valid p-values can be calculated. The following is his recommended algorithm. (Theorem 3 of Hansen (1996) shows that the algorithm produces asymptotically first-order correct p-values under the conditions of Theorem 1.
 }
 \value{
 \item{Wald.test}{Wald statistic}
