@@ -13,7 +13,7 @@ Mean=mean(x)
 lower=range(x)[1]+abs(Mean)*LB
 upper=range(x)[2]-abs(Mean)*LB
 gammas = seq(lower,upper,by=search) # Grid on Threshold parameter for estimation specify follow the data x
-dx = seq(min(x),max(x),by=0.1)              # Grid on regression function for display
+dx = seq(min(x),max(x),by=search)              # Grid on regression function for display
 level = level			              # For confidence sets
 boot = boot   			              # Number of bootstrap replications
 Ceps = c(0.5,1,2,4)		              # For numerical delta method bootstrap

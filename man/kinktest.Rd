@@ -16,7 +16,8 @@ kinktest(y,x,level=0.90, boot=10,search=0.01,LB=0.01)
   \item{x}{ the matrix of regime-dependent independent variable}
   \item{level}{ Confidence interval}
   \item{boot}{ number of boostrapping}
-   \item{search}{ range of grid search}
+   \item{search}{ range of grid search
+    \item{LB}{ lower and upper bound restriction}
 }
 
 \details{
