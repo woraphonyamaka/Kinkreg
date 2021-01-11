@@ -14,7 +14,7 @@ Kinkreg1 = function(y,x,Call="optim"){
     n=length(y)
     X=matrix(0,n,T*2)
     r=par[(K+2):length(par)]
-    for (j in 1:T){
+    for (j in 1:1){
       X[,c(j:(2*j))] = cbind(neg.part(x[,j]-r[j]),pos.part(x[,j]-r[j]))
     }
 
