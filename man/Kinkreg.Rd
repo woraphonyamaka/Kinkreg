@@ -29,6 +29,16 @@ The kink regression model is the nonlinear model in which the continous function
 Hansen, B. E. (2017). Regression kink with an unknown threshold. Journal of Business & Economic Statistics, 35(2), 228-240.
 
 Sriboochitta, S., Yamaka, W., Maneejuk, P., & Pastpipatkul, P. (2017). A generalized information theoretical approach to non-linear time series model. In Robustness in Econometrics (pp. 333-348). Springer, Cham.
+
+Maneejuk, P., Yamaka, W., & Sriboonchitta, S. (2019). Does the Kuznets curve exist in Thailand?
+A two decades’ perspective (1993–2015). Annals of Operations Research, 1-32.
+
+Maneejuk, P., & Yamaka, W. (2020). An analysis of the impacts of telecommunications technology
+and innovation on economic growth. Telecommunications Policy, 44(10), 102038.
+
+Maneejuk, P., & Yamaka, W. (2021). The Impact of Higher Education on Economic Growth in
+ASEAN-5 Countries. Sustainability, 13(2), 520.
+
 }
 \author{
 Woraphon Yamaka
