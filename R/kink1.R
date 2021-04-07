@@ -7,11 +7,12 @@ neg.part <- function(x) x*(x<0)  # Regime 2
 ##################################################3
 Kinkreg1 = function(y,x,Call="optim"){
   LSkink <- function(par,y,x,Call){
-    n <- length(y)
-    K1=ncol(x)*2
-
-    K=K1
+    K1=(ncol(x)*2)+1
+    k=length(par)
     n=length(y)
+    r=par[c((K1+1):k)]
+    T=length(r)
+
     X=matrix(0,n,T*2)
     r=par[(K+2):length(par)]
     for (j in 1:1){
@@ -19,8 +20,8 @@ Kinkreg1 = function(y,x,Call="optim"){
     }
 
     xmat=cbind(X)
-    K1=ncol(xmat)+1
-    alpha=par[1:K1]
+    KK1=ncol(xmat)+1
+    alpha=par[1:KK1]
     e1 = y - (cbind(1,xmat))%*%(alpha)
 
     if (Call=="optim")
