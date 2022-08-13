@@ -4,6 +4,6 @@
 
 library(devtools)
 
-install_github("woraphonyamaka/kinkreg", force=TRUE)
+install_github("woraphonyamaka/Kinkreg", force=TRUE)
 
-library(kinkreg)
+library(Kinkreg)
